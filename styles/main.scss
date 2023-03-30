@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=PT+Serif:wght@400;700&family=Poppins:ital,wght@0,600;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$color-white:#FAFAFA;
+$color-black:rgba(0, 0, 0, 1);
+
+$font-montserrat:'Montserrat', sans-serif;
+$font-poppins:'Poppins', sans-serif;
+$font-pt-serif:'PT Serif', serif;
+
+
+@mixin text-style($textSize:12px, $textColor:$color-black, $textWeight:normal, $fontFamily:$font-poppins){
+    font-size: $textSize;
+    font-weight: $textWeight;
+    color: $textColor;
+    font-family: $fontFamily;
+}
+
+body{
+    background-color: $color-white;
+    .page {
+        padding-inline: 180px;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 38px;
+    h1 {
+        @include text-style($textSize:36px, $textColor:$color-black , $textWeight:700 , $fontFamily:$font-pt-serif );
+    }
+    h4 {
+        @include text-style($textSize:18px, $textColor:$color-black , $textWeight:600 , $fontFamily:$font-poppins )
+    }
+    p {
+        @include text-style($textSize:18px, $textColor:rgba(0, 0, 0, 0.5) , $textWeight:400 , $fontFamily:$font-poppins );
+        max-width: 400px;
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    grid-column-gap: 72px;
+    grid-row-gap: 72px;
+    .member-item {
+        figure {
+            width: fit-content;
+            display: flex;
+            margin-bottom: 12px;
+            img {
+                min-width: 200px;
+                max-width: 230px;
+                width: 100%;
+            }
+            p {
+                @include text-style($textSize:12px, $textColor:$color-black , $textWeight:400 , $fontFamily:$font-pt-serif);
+                transform: rotate(90deg);
+                border: none;
+                position: absolute;
+                margin-left: 215px;
+                margin-top: 30px;
+            }
+           
+        }
+        h5 {
+            @include text-style($textSize:18px, $textColor:$color-black , $textWeight:600 , $fontFamily:$font-poppins )
+        }
+        
+    }
+
+    .two, .five {
+        margin-top: 102px;
+    }
+}
+
+footer {
+    padding-block: 38px;
+    p {
+        text-align: center;
+        @include text-style($textSize:14px, $textColor:rgba(169, 169, 169, 1) , $textWeight:500 , $fontFamily:$font-montserrat );
+        span {
+            font-weight:bold;
+        }
+    }
+}
+
+
+@media screen and (max-width:1290px) {
+    header {
+        flex-wrap: wrap;
+        h1 {
+            margin-bottom: 38px;
+            margin-right: 0px;
+        }
+        div {
+            margin-bottom: 38px;
+        }
+    }
+
+    .content {
+        grid-template-columns: repeat(2, 2fr);
+        .member-item {
+            figure {
+                img {
+                    max-width: 230px;
+                    width: 100%;
+                }
+            }
+        }
+        .two, .four, .six {
+            margin-top: 102px;
+        }
+        .five {
+            margin-top: 0px;
+        }
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    body {
+        .page {
+            padding-left: 12px;
+        }
+    }
+
+    header {
+        div {
+            p{
+                max-width: fit-content;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:879px){
+    .content {
+        .member-item {
+            figure {
+                p {
+                    margin-left: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:605px) {
+    .content {
+        .member-item {
+            figure {
+                p {
+                    margin-left: 190px;
+                }
+            }
+        }
+    }
+}

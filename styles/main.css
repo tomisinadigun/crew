@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=PT+Serif:wght@400;700&family=Poppins:ital,wght@0,600;1,400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #FAFAFA; }
+  body .page {
+    padding-inline: 180px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 38px; }
+  header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    font-family: "PT Serif", serif; }
+  header h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    font-family: "Poppins", sans-serif; }
+  header p {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "Poppins", sans-serif;
+    max-width: 400px; }
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-column-gap: 72px;
+  grid-row-gap: 72px; }
+  .content .member-item figure {
+    width: fit-content;
+    display: flex;
+    margin-bottom: 12px; }
+    .content .member-item figure img {
+      min-width: 200px;
+      max-width: 230px;
+      width: 100%; }
+    .content .member-item figure p {
+      font-size: 12px;
+      font-weight: 400;
+      color: black;
+      font-family: "PT Serif", serif;
+      transform: rotate(90deg);
+      border: none;
+      position: absolute;
+      margin-left: 215px;
+      margin-top: 30px; }
+  .content .member-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    font-family: "Poppins", sans-serif; }
+  .content .two, .content .five {
+    margin-top: 102px; }
+
+footer {
+  padding-block: 38px; }
+  footer p {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: darkgray;
+    font-family: "Montserrat", sans-serif; }
+    footer p span {
+      font-weight: bold; }
+
+@media screen and (max-width: 1290px) {
+  header {
+    flex-wrap: wrap; }
+    header h1 {
+      margin-bottom: 38px;
+      margin-right: 0px; }
+    header div {
+      margin-bottom: 38px; }
+
+  .content {
+    grid-template-columns: repeat(2, 2fr); }
+    .content .member-item figure img {
+      max-width: 230px;
+      width: 100%; }
+    .content .two, .content .four, .content .six {
+      margin-top: 102px; }
+    .content .five {
+      margin-top: 0px; } }
+@media screen and (max-width: 800px) {
+  body .page {
+    padding-left: 12px; }
+
+  header div p {
+    max-width: fit-content; } }
+@media screen and (max-width: 879px) {
+  .content .member-item figure p {
+    margin-left: 200px; } }
+@media screen and (max-width: 605px) {
+  .content .member-item figure p {
+    margin-left: 190px; } }
+
+/*# sourceMappingURL=main.css.map */
